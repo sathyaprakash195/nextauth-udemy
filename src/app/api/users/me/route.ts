@@ -3,6 +3,8 @@ export const dynamic = "force-dynamic";
 import { validateTokenAndGetUserId } from "@/helpers/tokenValidation";
 import { NextRequest, NextResponse } from "next/server";
 import User from "@/models/userModel";
+import { connectDB } from "@/config/dbConfig";
+connectDB();
 
 export async function GET(request: NextRequest) {
   try {
